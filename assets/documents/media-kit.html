@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam Sundar R — Founder & CEO, ScholarVault | Media Kit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-deep: #B8860B;
+            --gold-light: #E8D48B;
+            --gold-100: rgba(212,175,55,0.1);
+            --gold-200: rgba(212,175,55,0.2);
+            --black: #0B0B0B;
+            --charcoal: #1A1A1A;
+            --gray-100: #F8F6F0;
+            --gray-200: #E8E5DE;
+            --gray-300: #D1CEC7;
+            --gray-400: #94918A;
+            --gray-500: #6B7280;
+            --gray-600: #4A4A4A;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--charcoal);
+            background: var(--white);
+            line-height: 1.6;
+            font-size: 10pt;
+        }
+
+        .page {
+            max-width: 794px;
+            margin: 0 auto;
+            padding: 40px 48px;
+            page-break-after: always;
+        }
+
+        .page:last-child {
+            page-break-after: auto;
+        }
+
+        /* ===== PRINT BUTTON ===== */
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            border-radius: 50px;
+            padding: 14px 24px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(212,175,55,0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .print-btn:hover {
+            background: var(--gold-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212,175,55,0.4);
+        }
+
+        .print-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @media print {
+            .print-btn {
+                display: none !important;
+            }
+            body {
+                background: white;
+            }
+            .page {
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        /* ===== HEADER / COVER ===== */
+        .cover-header {
+            background: linear-gradient(135deg, #0B0B0B 0%, #1A1A1A 60%, #2A2520 100%);
+            border-radius: 16px;
+            padding: 48px 40px;
+            color: white;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212,175,55,0.15);
+        }
+
+        .cover-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cover-header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cover-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(212,175,55,0.12);
+            border: 1px solid rgba(212,175,55,0.25);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .cover-date {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 500;
+        }
+
+        .cover-title {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-subtitle {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-role {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.55);
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-links {
+            display: flex;
+            gap: 24px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-link {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cover-link span {
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        .cover-link svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 2;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--gold);
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .section-text {
+            font-size: 0.88rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        /* ===== INFO GRID ===== */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .info-card {
+            background: var(--gray-100);
+            border-radius: 10px;
+            padding: 16px 18px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .info-card-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .info-card-value {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* ===== MISSION/VISION CARDS ===== */
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .mv-card {
+            background: var(--gray-100);
+            border-radius: 12px;
+            padding: 20px;
+            border-top: 3px solid var(--gold);
+        }
+
+        .mv-card.vision {
+            border-top-color: var(--gold-deep);
+        }
+
+        .mv-card h4 {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .mv-card p {
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ===== METRICS ===== */
+        .metrics-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .metric {
+            text-align: center;
+            background: var(--gray-100);
+            border-radius: 10px;
+            padding: 14px 8px;
+        }
+
+        .metric-val {
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--gold-deep);
+            margin-bottom: 2px;
+        }
+
+        .metric-lbl {
+            font-size: 0.62rem;
+            color: var(--gray-500);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            line-height: 1.3;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline-compact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .tl-item {
+            display: flex;
+            gap: 10px;
+            padding: 10px 14px;
+            background: var(--gray-100);
+            border-radius: 8px;
+        }
+
+        .tl-date {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--gold-deep);
+            white-space: nowrap;
+            min-width: 56px;
+        }
+
+        .tl-content h5 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 1px;
+        }
+
+        .tl-content p {
+            font-size: 0.65rem;
+            color: var(--gray-500);
+            line-height: 1.4;
+        }
+
+        /* ===== FEATURES LIST ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            background: var(--gray-100);
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .feature-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* ===== TECH STACK ===== */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 14px;
+            background: var(--gray-100);
+            border-radius: 8px;
+        }
+
+        .tech-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--white);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: var(--charcoal);
+            border: 1px solid var(--gray-200);
+        }
+
+        .tech-name {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .tech-role {
+            font-size: 0.62rem;
+            color: var(--gray-500);
+        }
+
+        /* ===== VERIFIED SECTION ===== */
+        .verified-box {
+            background: linear-gradient(135deg, #0B0B0B 0%, #1A1A1A 60%, #2A2520 100%);
+            border-radius: 12px;
+            padding: 24px;
+            color: white;
+            margin-bottom: 20px;
+            border: 1px solid rgba(212,175,55,0.15);
+        }
+
+        .verified-box h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(212,175,55,0.15);
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 14px;
+            padding: 3px 10px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .verified-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .verified-feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.75);
+        }
+
+        .verified-feature::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        /* ===== BRAND COLORS ===== */
+        .color-swatches {
+            display: flex;
+            gap: 14px;
+            margin: 14px 0;
+        }
+
+        .swatch {
+            text-align: center;
+        }
+
+        .swatch-color {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            margin-bottom: 6px;
+            border: 1px solid var(--gray-200);
+        }
+
+        .swatch-label {
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: var(--gray-500);
+            line-height: 1.3;
+        }
+
+        .swatch-hex {
+            font-size: 0.55rem;
+            color: var(--gray-400);
+            font-family: 'Inter', monospace;
+        }
+
+        .swatch-type {
+            font-size: 0.5rem;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+        }
+
+        /* ===== CONTACT CARD ===== */
+        .contact-card {
+            background: linear-gradient(135deg, #0B0B0B 0%, #1A1A1A 60%, #2A2520 100%);
+            border-radius: 12px;
+            padding: 28px;
+            color: white;
+            border: 1px solid rgba(212,175,55,0.15);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-item-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(212,175,55,0.1);
+            border: 1px solid rgba(212,175,55,0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon svg {
+            width: 15px;
+            height: 15px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .contact-item-label {
+            font-size: 0.62rem;
+            color: rgba(255,255,255,0.45);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .contact-item-value {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* ===== REGISTRATIONS ===== */
+        .reg-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .reg-item {
+            padding: 12px 14px;
+            background: var(--gray-100);
+            border-radius: 8px;
+        }
+
+        .reg-item h5 {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 2px;
+        }
+
+        .reg-item p {
+            font-size: 0.65rem;
+            color: var(--gray-500);
+        }
+
+        /* ===== FOOTER ===== */
+        .doc-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 24px;
+        }
+
+        .doc-footer p {
+            font-size: 0.65rem;
+            color: var(--gray-400);
+            line-height: 1.5;
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            height: 1px;
+            background: var(--gray-200);
+            margin: 24px 0;
+        }
+
+        /* ===== FOUNDER ASSETS PAGE ===== */
+        .photo-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--gray-200);
+            margin-bottom: 12px;
+        }
+
+        .photo-placeholder span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gray-400);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .photo-variant-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--gray-500);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .bio-block {
+            background: var(--gray-100);
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .bio-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .bio-block-title {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: var(--black);
+        }
+
+        .bio-block-count {
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: var(--gold-deep);
+            background: var(--gold-100);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .bio-block p {
+            font-size: 0.78rem;
+            color: var(--gray-600);
+            line-height: 1.65;
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            body {
+                font-size: 9pt;
+            }
+
+            .page {
+                padding: 24px 32px;
+                margin: 0;
+                max-width: 100%;
+            }
+
+            .cover-header,
+            .verified-box,
+            .contact-card {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .swatch-color {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .info-card, .mv-card, .metric, .tl-item,
+            .feature-item, .tech-item, .reg-item,
+            .bio-block, .photo-placeholder {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* ===== SAVE AS PDF BUTTON (screen only) ===== */
+        .save-pdf-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            color: white;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+
+        .save-pdf-bar p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .save-pdf-btn {
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.2s;
+        }
+
+        .save-pdf-btn:hover {
+            background: var(--gold-deep);
+            color: white;
+        }
+
+        @media print {
+            .save-pdf-bar { display: none; }
+            body { padding-top: 0; }
+        }
+
+        @media screen {
+            body { padding-top: 52px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Save as PDF bar (screen only) -->
+    <div class="save-pdf-bar no-print">
+        <p>To save as PDF: Press <strong>Ctrl + P</strong> &rarr; Select <strong>&ldquo;Save as PDF&rdquo;</strong></p>
+        <button class="save-pdf-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+
+    <!-- ===== PAGE 1: COVER + OVERVIEW ===== -->
+    <div class="page">
+
+        <!-- Cover Header -->
+        <div class="cover-header">
+            <div class="cover-top">
+                <div class="cover-badge">Founder Media Kit</div>
+                <div class="cover-date">June 2026</div>
+            </div>
+            <div class="cover-title">Shyam Sundar R</div>
+            <div class="cover-subtitle">Founder & CEO, ScholarVault</div>
+            <div class="cover-role">Building India's Trusted Digital Ecosystem for Researchers</div>
+            <div class="cover-links">
+                <div class="cover-link">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span>scholarvault.in</span>
+                </div>
+                <div class="cover-link">
+                    <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    <span>app.scholarvault.in</span>
+                </div>
+                <div class="cover-link">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>hello@scholarvault.in</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Founder Bio -->
+        <div class="section">
+            <div class="section-title">About the Founder</div>
+            <p class="section-text">
+                Shyam Sundar R is the Founder & CEO of ScholarVault — an academic technology initiative focused on creating a trustworthy and modern ecosystem for researchers, faculty members, students, institutions, and conference communities.
+            </p>
+            <p class="section-text">
+                His professional journey began in customer support and conference operations, where he gained hands-on experience working with research conferences, academic communities, and institutional stakeholders. These experiences revealed significant challenges within the research ecosystem — including fragmented resources, predatory conferences, limited visibility for scholars, and disconnected academic networks.
+            </p>
+            <p class="section-text">
+                To address these challenges, he founded ScholarVault on 26 February 2026 with a vision of building a trusted digital infrastructure that empowers academic growth, research collaboration, scholarly visibility, and conference transparency.
+            </p>
+        </div>
+
+        <!-- Quick Facts -->
+        <div class="section">
+            <div class="section-title">Quick Facts</div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-card-label">Full Name</div>
+                    <div class="info-card-value">Shyam Sundar R</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">Title</div>
+                    <div class="info-card-value">Founder & CEO</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">Company</div>
+                    <div class="info-card-value">ScholarVault</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">Founded</div>
+                    <div class="info-card-value">26 February 2026</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">Industry</div>
+                    <div class="info-card-value">Academic Technology</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">Headquarters</div>
+                    <div class="info-card-value">Chennai, Tamil Nadu, India</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="section">
+            <div class="section-title">Mission & Vision</div>
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <h4>Mission</h4>
+                    <p>Create the most trusted research ecosystem in India that connects researchers, institutions, conferences, publishers, and academic communities through technology.</p>
+                </div>
+                <div class="mv-card vision">
+                    <h4>Vision</h4>
+                    <p>To become the digital backbone of global scholarly collaboration — enabling every researcher to discover opportunities, build credibility, share knowledge, and advance innovation without barriers.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== PAGE 2: COMPANY OVERVIEW ===== -->
+    <div class="page">
+
+        <!-- Key Metrics -->
+        <div class="section">
+            <div class="section-title">Key Metrics</div>
+            <div class="metrics-row">
+                <div class="metric">
+                    <div class="metric-val">100+</div>
+                    <div class="metric-lbl">Registered Users</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-val">1</div>
+                    <div class="metric-lbl">Live Academic Platform</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-val">ICAHCR</div>
+                    <div class="metric-lbl">Conference Launched</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-val">5</div>
+                    <div class="metric-lbl">Business Registrations</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-val">6+</div>
+                    <div class="metric-lbl">Years Experience</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About ScholarVault -->
+        <div class="section">
+            <div class="section-title">About ScholarVault</div>
+            <p class="section-text">
+                ScholarVault is an emerging academic technology platform focused on empowering researchers, academicians, students, institutions, and conference organizers. The platform aims to simplify academic discovery, conference participation, scholarly networking, professional visibility, and research opportunities through a modern digital experience.
+            </p>
+        </div>
+
+        <!-- Platform Features -->
+        <div class="section">
+            <div class="section-title">Platform Features</div>
+            <div class="features-grid">
+                <div class="feature-item"><span class="feature-dot"></span>Academic Discovery</div>
+                <div class="feature-item"><span class="feature-dot"></span>Conference Verification</div>
+                <div class="feature-item"><span class="feature-dot"></span>Scholarly Networking</div>
+                <div class="feature-item"><span class="feature-dot"></span>Research Visibility</div>
+                <div class="feature-item"><span class="feature-dot"></span>Trust Infrastructure</div>
+                <div class="feature-item"><span class="feature-dot"></span>Community Platform</div>
+            </div>
+        </div>
+
+        <!-- ScholarVault Verified -->
+        <div class="section">
+            <div class="verified-box">
+                <h4>
+                    ScholarVault Verified
+                    <span class="verified-badge">Trust Framework</span>
+                </h4>
+                <p style="font-size: 0.78rem; color: rgba(255,255,255,0.65); margin-bottom: 14px; line-height: 1.6;">
+                    ScholarVault Verified is a conference evaluation and trust framework that helps researchers assess transparency, credibility, and publicly available academic indicators before participating in conferences and publication opportunities.
+                </p>
+                <div class="verified-features">
+                    <div class="verified-feature">Conference Trust Scoring</div>
+                    <div class="verified-feature">Conference Risk Assessment</div>
+                    <div class="verified-feature">Transparency Verification</div>
+                    <div class="verified-feature">Academic Credibility Indicators</div>
+                    <div class="verified-feature">Indexing Verification</div>
+                    <div class="verified-feature">Peer-Review Practice Assessment</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Company Timeline -->
+        <div class="section">
+            <div class="section-title">Company Timeline</div>
+            <div class="timeline-compact">
+                <div class="tl-item">
+                    <div class="tl-date">Feb 2026</div>
+                    <div class="tl-content">
+                        <h5>ScholarVault Founded</h5>
+                        <p>Company officially registered</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">Mar 2026</div>
+                    <div class="tl-content">
+                        <h5>Development Begins</h5>
+                        <p>Core architecture & design system</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">Apr 2026</div>
+                    <div class="tl-content">
+                        <h5>PWA Launch</h5>
+                        <p>Platform goes live for researchers</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">May 2026</div>
+                    <div class="tl-content">
+                        <h5>GST Registration</h5>
+                        <p>Full tax compliance achieved</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">May 2026</div>
+                    <div class="tl-content">
+                        <h5>Business Banking</h5>
+                        <p>Federal Bank account activated</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">Jun 2026</div>
+                    <div class="tl-content">
+                        <h5>Startup India Registration</h5>
+                        <p>Registration completed</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">Jun 2026</div>
+                    <div class="tl-content">
+                        <h5>ICAHCR 2026</h5>
+                        <p>First conference launched</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-date">2026+</div>
+                    <div class="tl-content">
+                        <h5>Expanding Ecosystem</h5>
+                        <p>Partnerships & scaling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== PAGE 3: TECH, BRAND, CONTACT ===== -->
+    <div class="page">
+
+        <!-- Technology Infrastructure -->
+        <div class="section">
+            <div class="section-title">Technology Infrastructure</div>
+            <p class="section-text" style="margin-bottom: 14px;">
+                ScholarVault is built on trusted global platforms that power authentication, cloud infrastructure, communication, payments, analytics, and reliability.
+            </p>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">G</div>
+                    <div>
+                        <div class="tech-name">Google Workspace</div>
+                        <div class="tech-role">Productivity & Email</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">S</div>
+                    <div>
+                        <div class="tech-name">Supabase</div>
+                        <div class="tech-role">Database & Backend</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">V</div>
+                    <div>
+                        <div class="tech-name">Vercel</div>
+                        <div class="tech-role">Hosting & Deployment</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">C</div>
+                    <div>
+                        <div class="tech-name">Clerk</div>
+                        <div class="tech-role">Authentication</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">R</div>
+                    <div>
+                        <div class="tech-name">Resend</div>
+                        <div class="tech-role">Transactional Email</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">Se</div>
+                    <div>
+                        <div class="tech-name">Sentry</div>
+                        <div class="tech-role">Error Monitoring</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">D</div>
+                    <div>
+                        <div class="tech-name">Dodo Payments</div>
+                        <div class="tech-role">Payment Processing</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">A</div>
+                    <div>
+                        <div class="tech-name">Adobe</div>
+                        <div class="tech-role">Design & Creative</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">M</div>
+                    <div>
+                        <div class="tech-name">Meta</div>
+                        <div class="tech-role">Social & Business</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Official Registrations -->
+        <div class="section">
+            <div class="section-title">Official Registrations</div>
+            <div class="reg-grid">
+                <div class="reg-item">
+                    <h5>MSME/Udyam Registration</h5>
+                    <p>Government of India — Micro Enterprise</p>
+                </div>
+                <div class="reg-item">
+                    <h5>Startup India Registration</h5>
+                    <p>Registered under Startup India initiative</p>
+                </div>
+                <div class="reg-item">
+                    <h5>GST Registration</h5>
+                    <p>Goods & Services Tax — Compliant</p>
+                </div>
+                <div class="reg-item">
+                    <h5>Business Banking</h5>
+                    <p>Federal Bank — Current Account</p>
+                </div>
+                <div class="reg-item">
+                    <h5>Domain & Digital Identity</h5>
+                    <p>scholarvault.in — verified ownership</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Brand Guidelines -->
+        <div class="section">
+            <div class="section-title">Official Brand Colors</div>
+            <div style="margin-bottom: 4px;">
+                <div class="swatch-type">Primary Colors</div>
+            </div>
+            <div class="color-swatches">
+                <div class="swatch">
+                    <div class="swatch-color" style="background: #D4AF37;"></div>
+                    <div class="swatch-label">ScholarVault<br>Gold</div>
+                    <div class="swatch-hex">#D4AF37</div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background: #B8860B;"></div>
+                    <div class="swatch-label">Deep Gold</div>
+                    <div class="swatch-hex">#B8860B</div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background: #0B0B0B;"></div>
+                    <div class="swatch-label">Rich Black</div>
+                    <div class="swatch-hex">#0B0B0B</div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background: #1A1A1A;"></div>
+                    <div class="swatch-label">Charcoal</div>
+                    <div class="swatch-hex">#1A1A1A</div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background: #FFFFFF;"></div>
+                    <div class="swatch-label">White</div>
+                    <div class="swatch-hex">#FFFFFF</div>
+                </div>
+            </div>
+            <div style="margin-top: 12px; margin-bottom: 4px;">
+                <div class="swatch-type">Secondary Colors</div>
+            </div>
+            <div class="color-swatches" style="margin-top: 4px;">
+                <div class="swatch">
+                    <div class="swatch-color" style="background: #F8F6F0;"></div>
+                    <div class="swatch-label">Warm Ivory</div>
+                    <div class="swatch-hex">#F8F6F0</div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background: #6B7280;"></div>
+                    <div class="swatch-label">Slate Gray</div>
+                    <div class="swatch-hex">#6B7280</div>
+                </div>
+            </div>
+            <p class="section-text" style="font-size: 0.75rem; margin-top: 10px;">
+                <strong>Typography:</strong> Inter (Primary) — Used across all digital interfaces and print materials.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Contact & Official URLs -->
+        <div class="section">
+            <div class="contact-card">
+                <h4 style="font-size: 0.95rem; font-weight: 800; margin-bottom: 18px;">Contact & Official URLs</h4>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Email</div>
+                            <div class="contact-item-value">hello@scholarvault.in</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Phone</div>
+                            <div class="contact-item-value">+91 93449 00624</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Website</div>
+                            <div class="contact-item-value">https://scholarvault.in</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Platform</div>
+                            <div class="contact-item-value">https://app.scholarvault.in</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">ICAHCR 2026 Conference</div>
+                            <div class="contact-item-value">https://aihealth.scholarvault.in</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Founder LinkedIn</div>
+                            <div class="contact-item-value">linkedin.com/in/shyamssr</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <div>
+                            <div class="contact-item-label">Company LinkedIn</div>
+                            <div class="contact-item-value">linkedin.com/company/thescholarvault</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="doc-footer">
+            <p>
+                <strong>Shyam Sundar R</strong> — Founder & CEO, ScholarVault<br>
+                &copy; 2026 ScholarVault. All rights reserved.<br>
+                This document is intended for media, institutional, and partnership use. For custom inquiries, contact hello@scholarvault.in
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ===== PAGE 4: FOUNDER ASSETS ===== -->
+    <div class="page">
+
+        <!-- Founder Portrait Assets -->
+        <div class="section">
+            <div class="section-title">Founder Portrait Assets</div>
+            <p class="section-text" style="margin-bottom: 16px;">
+                High-resolution founder portraits are available for media, press, event programs, and institutional publications. Contact hello@scholarvault.in to request original files.
+            </p>
+            <div class="photo-grid">
+                <div>
+                    <div class="photo-placeholder">
+                        <span>Standard Portrait</span>
+                    </div>
+                    <div class="photo-variant-label">Original / Standard</div>
+                </div>
+                <div>
+                    <div class="photo-placeholder" style="background: linear-gradient(135deg, #0B0B0B, #1A1A1A);">
+                        <span style="color: rgba(255,255,255,0.5);">Dark Background</span>
+                    </div>
+                    <div class="photo-variant-label">Dark Background</div>
+                </div>
+                <div>
+                    <div class="photo-placeholder" style="background: #ffffff;">
+                        <span>White Background</span>
+                    </div>
+                    <div class="photo-variant-label">White Background</div>
+                </div>
+            </div>
+            <p class="section-text" style="font-size: 0.72rem; color: var(--gray-400); font-style: italic;">
+                Available formats: JPEG, PNG (transparent). Minimum resolution: 2000&times;2000px. Contact for custom crops or specific dimensions.
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Founder Bios -->
+        <div class="section">
+            <div class="section-title">Founder Bios</div>
+            <p class="section-text" style="margin-bottom: 16px;">
+                Ready-to-use bios for event programs, speaker introductions, press coverage, and institutional publications.
+            </p>
+
+            <!-- Short Bio -->
+            <div class="bio-block">
+                <div class="bio-block-header">
+                    <div class="bio-block-title">Short Bio</div>
+                    <div class="bio-block-count">~50 words</div>
+                </div>
+                <p>
+                    Shyam Sundar R is the Founder & CEO of ScholarVault, an academic technology platform building trusted infrastructure for researchers, institutions, and conference communities in India. With over six years of experience in conference operations and academic ecosystems, he is focused on making scholarly opportunities more transparent, discoverable, and trustworthy.
+                </p>
+            </div>
+
+            <!-- Medium Bio -->
+            <div class="bio-block">
+                <div class="bio-block-header">
+                    <div class="bio-block-title">Medium Bio</div>
+                    <div class="bio-block-count">~150 words</div>
+                </div>
+                <p>
+                    Shyam Sundar R is the Founder & CEO of ScholarVault — an academic technology initiative creating a trustworthy and modern digital ecosystem for researchers, faculty members, students, institutions, and conference communities.
+                </p>
+                <p style="margin-top: 8px;">
+                    His professional journey began in customer support and conference operations, where he gained firsthand experience with research conferences, academic communities, and institutional stakeholders. These experiences exposed critical challenges in the research ecosystem — fragmented resources, predatory conferences, limited visibility for scholars, and disconnected academic networks.
+                </p>
+                <p style="margin-top: 8px;">
+                    To address these challenges, he founded ScholarVault on 26 February 2026 with a vision of building trusted digital infrastructure that empowers academic growth, research collaboration, scholarly visibility, and conference transparency. Today, ScholarVault serves over 100 registered researchers and has launched its first academic conference, ICAHCR 2026.
+                </p>
+            </div>
+
+            <!-- Long Bio -->
+            <div class="bio-block">
+                <div class="bio-block-header">
+                    <div class="bio-block-title">Extended Bio</div>
+                    <div class="bio-block-count">~300 words</div>
+                </div>
+                <p>
+                    Shyam Sundar R is the Founder & CEO of ScholarVault, an academic technology platform focused on creating the most trusted research ecosystem in India. ScholarVault connects researchers, institutions, conferences, publishers, and academic communities through technology — simplifying academic discovery, conference participation, scholarly networking, and professional visibility.
+                </p>
+                <p style="margin-top: 8px;">
+                    With over six years of professional experience spanning customer support, conference operations, and academic community engagement, Shyam identified critical pain points across the research landscape. Researchers routinely face fragmented resources, predatory conferences, opaque academic processes, and limited mechanisms for building scholarly credibility. These observations directly informed the creation of ScholarVault.
+                </p>
+                <p style="margin-top: 8px;">
+                    Founded on 26 February 2026, ScholarVault has achieved significant milestones in a short period: launching a Progressive Web App for researchers, completing GST registration and business banking, securing MSME/Udyam registration, and registering under the Startup India initiative. The platform has onboarded over 100 researchers and launched ICAHCR 2026, its first academic conference.
+                </p>
+                <p style="margin-top: 8px;">
+                    A key innovation is ScholarVault Verified — a conference evaluation and trust framework that helps researchers assess transparency, credibility, and publicly available academic indicators before participating in conferences and publication opportunities. This framework includes Conference Trust Scoring, Conference Risk Assessment, Indexing Verification, and Peer-Review Practice Assessment.
+                </p>
+                <p style="margin-top: 8px;">
+                    ScholarVault's vision is to become the digital backbone of global scholarly collaboration — enabling every researcher to discover opportunities, build credibility, share knowledge, and advance innovation without barriers.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="doc-footer">
+            <p>
+                <strong>Shyam Sundar R</strong> — Founder & CEO, ScholarVault<br>
+                &copy; 2026 ScholarVault. All rights reserved.<br>
+                For portrait files, custom bios, or press inquiries, contact hello@scholarvault.in
+            </p>
+        </div>
+
+    </div>
+
+    <button class="print-btn" onclick="window.print()" aria-label="Save as PDF">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Save as PDF
+    </button>
+</body>
+</html>
